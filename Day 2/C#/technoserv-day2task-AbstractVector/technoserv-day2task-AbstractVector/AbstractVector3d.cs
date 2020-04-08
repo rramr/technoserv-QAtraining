@@ -1,6 +1,6 @@
 ﻿namespace technoserv_day2task_AbstractVector
 {
-    abstract class AbstractVector
+    abstract class AbstractVector3d
     {
         public double x { get; protected set; }
         public double y { get; protected set; }
@@ -10,9 +10,9 @@
         public abstract double getZ();
         public abstract string toString();
 
-        public abstract double[] addVec(double x, double y, double z);
-        public abstract double[] subVec(double x, double y, double z);
-        public abstract double[] vectorMultip(double x, double y, double z);
-        public abstract double scalarMultip(double x, double y, double z);
+        public abstract Vector3d addVec(Vector3d vec);
+        public abstract Vector3d subVec(Vector3d vec);
+        public abstract Vector3d vectorMultip(Vector3d vec);
+        public abstract double scalarMultip(Vector3d vec);
     }
 }

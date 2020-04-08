@@ -2,7 +2,7 @@
 
 namespace technoserv_day2task_AbstractVector
 {
-    class Vector2d : AbstractVector
+    class Vector2d : AbstractVector2d
     {
         private new double x, y;
 
@@ -14,47 +14,34 @@ namespace technoserv_day2task_AbstractVector
         }
 
         //Получение значения 'x'
-        public override double getX()
-        {
-            return x;
-        }
+        public override double getX() { return x; }
 
         //Получение значения 'y'
-        public override double getY()
-        {
-            return y;
-        }
+        public override double getY() { return y; }
 
-        //Пустое значение 'z' для совместной работы с классом Vector3d(3 переменных в конструкторе) через абстрактный класс
-        public override double getZ()
-        {
-            return 0;
-        }
 
         //Сложение двумерных векторов
-        public override double[] addVec(double x2, double y2, double z2)
+        public override Vector2d addVec(Vector2d vec)
         {
-            double[] newVec = { x + x2, y + y2 };
-            return newVec;
+            return new Vector2d(
+                this.getX() + vec.getX(),
+                this.getY() + vec.getY()
+                );
         }
 
         //Вычитание двумерных векторов
-        public override double[] subVec(double x2, double y2, double z2)
+        public override Vector2d subVec(Vector2d vec)
         {
-            double[] newVec = { x - x2, y - y2 };
-            return newVec;
+            return new Vector2d(
+                this.getX() - vec.getX(),
+                this.getY() - vec.getY()
+                );
         }
 
         //Скалярное произведение двумерных векторов
-        public override double scalarMultip(double x2, double y2, double z2)
+        public override double scalarMultip(Vector2d vec)
         {
-            return x * x2 + y * y2;
-        }
-
-        //Векторное произведение двумерных векторов
-        public override double[] vectorMultip(double x, double y, double z)
-        {
-            return null;
+            return x * vec.getX() + y * vec.getY();
         }
 
         //Вывод вектора

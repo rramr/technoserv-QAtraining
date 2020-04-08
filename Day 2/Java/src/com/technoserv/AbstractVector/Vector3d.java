@@ -1,6 +1,6 @@
 package com.technoserv.AbstractVector;
 
-public class Vector3d extends AbstractVector {
+public class Vector3d extends AbstractVector3d {
     private double x, y, z;
 
     //Конструктор класса Vector3d
@@ -11,9 +11,7 @@ public class Vector3d extends AbstractVector {
     }
 
     //Получение значения 'x'
-    public double getX() {
-        return x;
-    }
+    public double getX() { return x; }
 
     //Получение значения 'y'
     public double getY() {
@@ -26,30 +24,34 @@ public class Vector3d extends AbstractVector {
     }
 
     //Сложение трёхмерных векторов
-    public double[] addVec(double x2, double y2, double z2){
-        double[] newVec = {x + x2, y + y2, z + z2};
-        return newVec;
+    public Vector3d addVec(Vector3d vec){
+        return new Vector3d(
+                this.getX() + vec.getX(),
+                this.getY() + vec.getY(),
+                this.getZ() + vec.getZ());
     }
 
     //Вычитание трёхмерных векторов
-    public double[] subVec(double x2, double y2, double z2){
-        double[] newVec = {x - x2, y - y2, z - z2};
-        return newVec;
+    public Vector3d subVec(Vector3d vec){
+        return new Vector3d(
+                this.getX() - vec.getX(),
+                this.getY() - vec.getY(),
+                this.getZ() - vec.getZ());
     }
 
     //Векторное произведение трёхмерных векторов
-    public double[] vectorMultip(double x2, double y2, double z2){
-        double[] newVec = {
-                y * z2 - z * y2,
-                -(x * z2 - z * x2),
-                x * y2 - y * x2
-        };
-        return newVec;
+    public Vector3d vectorMultip(Vector3d vec){
+        double newX = this.getY() * vec.getZ() - this.getZ() * vec.getY();
+        double newY = - (this.getX() * vec.getZ() - this.getZ() * vec.getX());
+        double newZ = this.getX() * vec.getY() - this.getY() * vec.getX();
+        return new Vector3d(newX, newY, newZ);
     }
 
     //Скалярное произведение трёхмерных векторов
-    public double scalarMultip(double x2, double y2, double z2){
-        return x * x2 + y * y2 + z * z2;
+    public double scalarMultip(Vector3d vec){
+        return  this.getX() * vec.getX() +
+                this.getY() * vec.getY() +
+                this.getZ() * vec.getZ();
     }
 
     //Вывод вектора
