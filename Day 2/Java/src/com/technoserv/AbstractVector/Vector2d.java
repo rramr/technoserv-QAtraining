@@ -1,7 +1,7 @@
 package com.technoserv.AbstractVector;
 
 public class Vector2d extends AbstractVector {
-    public double x, y;
+    private double x, y;
 
     //Конструктор класса Vector2d
     public Vector2d(double x, double y){

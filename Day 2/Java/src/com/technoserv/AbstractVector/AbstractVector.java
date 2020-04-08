@@ -6,6 +6,7 @@ public abstract class AbstractVector {
     public abstract double getX();
     public abstract double getY();
     public abstract double getZ();
+    public abstract String toString();
 
     public abstract double[] addVec(double x, double y, double z);
     public abstract double[] subVec(double x, double y, double z);
