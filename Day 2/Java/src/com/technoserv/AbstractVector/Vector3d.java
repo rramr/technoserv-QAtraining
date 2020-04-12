@@ -1,6 +1,6 @@
 package com.technoserv.AbstractVector;
 
-public class Vector3d extends AbstractVector3d {
+public class Vector3d extends AbstractVector<Vector3d> {
     private double x, y, z;
 
     //Конструктор класса Vector3d
@@ -24,7 +24,7 @@ public class Vector3d extends AbstractVector3d {
     }
 
     //Сложение трёхмерных векторов
-    public Vector3d addVec(Vector3d vec){
+    public Vector3d addVec(AbstractVector<Vector3d> vec){
         return new Vector3d(
                 this.getX() + vec.getX(),
                 this.getY() + vec.getY(),
@@ -32,7 +32,7 @@ public class Vector3d extends AbstractVector3d {
     }
 
     //Вычитание трёхмерных векторов
-    public Vector3d subVec(Vector3d vec){
+    public Vector3d subVec(AbstractVector<Vector3d> vec){
         return new Vector3d(
                 this.getX() - vec.getX(),
                 this.getY() - vec.getY(),
@@ -40,7 +40,7 @@ public class Vector3d extends AbstractVector3d {
     }
 
     //Векторное произведение трёхмерных векторов
-    public Vector3d vectorMultip(Vector3d vec){
+    public Vector3d vectorMultip(AbstractVector<Vector3d> vec){
         double newX = this.getY() * vec.getZ() - this.getZ() * vec.getY();
         double newY = - (this.getX() * vec.getZ() - this.getZ() * vec.getX());
         double newZ = this.getX() * vec.getY() - this.getY() * vec.getX();
@@ -48,7 +48,7 @@ public class Vector3d extends AbstractVector3d {
     }
 
     //Скалярное произведение трёхмерных векторов
-    public double scalarMultip(Vector3d vec){
+    public double scalarMultip(AbstractVector<Vector3d> vec){
         return  this.getX() * vec.getX() +
                 this.getY() * vec.getY() +
                 this.getZ() * vec.getZ();

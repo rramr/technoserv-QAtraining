@@ -1,6 +1,6 @@
 package com.technoserv.AbstractVector;
 
-public class Vector2d extends AbstractVector2d {
+public class Vector2d extends AbstractVector<Vector2d> {
     private double x, y;
 
     //Конструктор класса Vector2d
@@ -15,8 +15,13 @@ public class Vector2d extends AbstractVector2d {
     //Получение значения 'y'
     public double getY() { return y; }
 
+    @Override
+    public double getZ() {
+        return 0;
+    }
+
     //Сложение двумерных векторов
-    public Vector2d addVec(Vector2d vec){
+    public Vector2d addVec(AbstractVector<Vector2d> vec){
         return new Vector2d(
                 this.getX() + vec.getX(),
                 this.getY() + vec.getY()
@@ -24,15 +29,20 @@ public class Vector2d extends AbstractVector2d {
     }
 
     //Вычитание двумерных векторов
-    public Vector2d subVec(Vector2d vec){
+    public Vector2d subVec(AbstractVector<Vector2d> vec){
         return new Vector2d(
                 this.getX() - vec.getX(),
                 this.getY() - vec.getY()
         );
     }
 
+    @Override
+    public Vector2d vectorMultip(AbstractVector<Vector2d> vec) {
+        return null;
+    }
+
     //Скалярное произведение двумерных векторов
-    public double scalarMultip(Vector2d vec){
+    public double scalarMultip(AbstractVector<Vector2d> vec){
         return x * vec.getX() + y * vec.getY();
     }
 

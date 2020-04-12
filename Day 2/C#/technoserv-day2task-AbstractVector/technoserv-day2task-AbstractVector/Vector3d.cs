@@ -2,7 +2,7 @@
 
 namespace technoserv_day2task_AbstractVector
 {
-    class Vector3d : AbstractVector3d
+    class Vector3d : AbstractVector<Vector3d>
     {
         private new double x, y, z;
 
@@ -24,7 +24,7 @@ namespace technoserv_day2task_AbstractVector
         public override double getZ() { return z; }
 
         //Сложение трёхмерных векторов
-        public override Vector3d addVec(Vector3d vec)
+        public override Vector3d addVec(AbstractVector<Vector3d> vec)
         {
             return new Vector3d(
                 this.getX() + vec.getX(),
@@ -34,7 +34,7 @@ namespace technoserv_day2task_AbstractVector
         }
 
         //Вычитание трёхмерных векторов
-        public override Vector3d subVec(Vector3d vec)
+        public override Vector3d subVec(AbstractVector<Vector3d> vec)
         {
             return new Vector3d(
                 this.getX() - vec.getX(),
@@ -44,18 +44,18 @@ namespace technoserv_day2task_AbstractVector
         }
 
         //Векторное произведение трёхмерных векторов
-        public override Vector3d vectorMultip(Vector3d vec)
+        public override Vector3d vectorMultip(AbstractVector<Vector3d> vec)
         {
             double newX = this.getY() * vec.getZ() - this.getZ() * vec.getY();
-            double newY = - (this.getX() * vec.getZ() - this.getZ() * vec.getX());
+            double newY = -(this.getX() * vec.getZ() - this.getZ() * vec.getX());
             double newZ = this.getX() * vec.getY() - this.getY() * vec.getX();
             return new Vector3d(newX, newY, newZ);
         }
 
         //Скалярное произведение трёхмерных векторов
-        public override double scalarMultip(Vector3d vec)
+        public override double scalarMultip(AbstractVector<Vector3d> vec)
         {
-            return 
+            return
                 this.getX() * vec.getX() +
                 this.getY() * vec.getY() +
                 this.getZ() * vec.getZ();

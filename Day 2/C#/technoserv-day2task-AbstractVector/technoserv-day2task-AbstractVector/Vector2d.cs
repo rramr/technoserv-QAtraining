@@ -2,7 +2,7 @@
 
 namespace technoserv_day2task_AbstractVector
 {
-    class Vector2d : AbstractVector2d
+    class Vector2d : AbstractVector<Vector2d>
     {
         private new double x, y;
 
@@ -21,7 +21,7 @@ namespace technoserv_day2task_AbstractVector
 
 
         //Сложение двумерных векторов
-        public override Vector2d addVec(Vector2d vec)
+        public override Vector2d addVec(AbstractVector<Vector2d> vec)
         {
             return new Vector2d(
                 this.getX() + vec.getX(),
@@ -30,7 +30,7 @@ namespace technoserv_day2task_AbstractVector
         }
 
         //Вычитание двумерных векторов
-        public override Vector2d subVec(Vector2d vec)
+        public override Vector2d subVec(AbstractVector<Vector2d> vec)
         {
             return new Vector2d(
                 this.getX() - vec.getX(),
@@ -39,7 +39,7 @@ namespace technoserv_day2task_AbstractVector
         }
 
         //Скалярное произведение двумерных векторов
-        public override double scalarMultip(Vector2d vec)
+        public override double scalarMultip(AbstractVector<Vector2d> vec)
         {
             return x * vec.getX() + y * vec.getY();
         }
@@ -51,6 +51,18 @@ namespace technoserv_day2task_AbstractVector
                     "x=" + x +
                     ", y=" + y +
                     '}';
+        }
+
+        //Исключение нереализованного getZ()
+        public override double getZ()
+        {
+            throw new NotImplementedException();
+        }
+
+        //Исключение нереализованного vectorMultip()
+        public override Vector2d vectorMultip(AbstractVector<Vector2d> vec)
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -3,8 +3,7 @@
 ### Структура
 
 - Класс Main - [Program.cs](technoserv-day2task-AbstractVector/technoserv-day2task-AbstractVector/Program.cs "Program.cs")
-- Абстрактный класс AbstractVector2d - [AbstractVector2d.cs](technoserv-day2task-AbstractVector/technoserv-day2task-AbstractVector/AbstractVector2d.cs "AbstractVector2d.cs")
-- Абстрактный класс AbstractVector3d - [AbstractVector3d.cs](technoserv-day2task-AbstractVector/technoserv-day2task-AbstractVector/AbstractVector3d.cs "AbstractVector3d.cs")
+- Абстрактный класс AbstractVector - [AbstractVector.cs](technoserv-day2task-AbstractVector/technoserv-day2task-AbstractVector/AbstractVector.cs "AbstractVector.cs")
 - Класс Vector2d - [Vector2d.cs](technoserv-day2task-AbstractVector/technoserv-day2task-AbstractVector/Vector2d.cs "Vector2d.cs")
 - Класс Vector3d - [Vector3d.cs](technoserv-day2task-AbstractVector/technoserv-day2task-AbstractVector/Vector3d.cs "Vector3d.cs")
 
@@ -28,5 +27,5 @@ x = 1, y = 2, z = 1
 
 - Сложение двумерных векторов: `[8.0, 6.0]`
 - Вычитание трёхмерных векторов: `[1.0, 1.0, 4.0]`
-- Векторное трёхмерных произведение: `[-7.0, 3.0, 1.0]`
-- Скалярное двумерных произведение: `23.0`
+- Векторное произведение трёхмерных векторов: `[-7.0, 3.0, 1.0]`
+- Скалярное произведение двумерных векторов: `23.0`

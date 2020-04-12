@@ -9,7 +9,9 @@ public class Main {
     public static void main(String[] args) {
         System.setProperty("webdriver.gecko.driver","/usr/local/bin/geckodriver");
         System.setProperty("webdriver.chrome.driver","/usr/local/bin/chromedriver");
-        WebDriver driver = new ChromeDriver();
+        WebDriver driver = new FirefoxDriver();
+//        WebDriver driver = new ChromeDriver();
+//        WebDriver driver = new SafariDriver();
 
         String baseUrl = "http://demo.guru99.com/test/newtours/";
         String expectedTitle = "Welcome: Mercury Tours";

@@ -10,16 +10,16 @@
 
 - Sample - [Sample.java](main/technoserv/selenium/Sample.java "Sample.java")
 
-### Настройка драйверов
+### Настройка драйверов *(написано под macOS)*
 
 #### Google Chrome
 
-1. Ручная установка ChromeDriver в директорию `/usr/local/bin/chromedriver` и вызов его командой или установка через Homebrew командой `brew install chromedriver`
+1. Ручная установка ChromeDriver в директорию `/usr/local/bin/chromedriver` или установка через Homebrew командой `brew install chromedriver`
 2. Перед инициализацие драйвера указать системное свойство, содержащее путь к драйверу `System.setProperty("webdriver.chrome.driver","/usr/local/bin/chromedriver");`
 
 #### Firefox
 
-1. Ручная установка geckodriver в директорию `/usr/local/bin/geckodriver` и вызов его командой или установка через Homebrew командой `brew install geckodriver`
+1. Ручная установка geckodriver в директорию `/usr/local/bin/geckodriver` или установка через Homebrew командой `brew install geckodriver`
 2. Перед инициализацие драйвера указать системное свойство, содержащее путь к драйверу `System.setProperty("webdriver.gecko.driver","/usr/local/bin/geckodriver");`
 
 #### Safari

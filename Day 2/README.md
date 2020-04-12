@@ -6,3 +6,9 @@
 
 - [Реализация на Java](Java "Реализация на Java")
 - [Реализация на C#](C%23 "Реализация на C#")
+
+### Диаграмма классов
+
+![Class diagram](../assets/day2/technoserv-QAtraining-day1-ClassDiagram.png)
+
+*Сделана с помощью [draw.io](https://draw.io "draw.io")*
