@@ -1,0 +1,76 @@
+{
+  "Settings": {
+    "browser": "chrome"
+  },
+
+  "TitleDemo": {
+    "url": "http://demo.guru99.com/test/newtours/",
+    "expectedTitle": "Welcome: Mercury Tours"
+  },
+
+  "PopupDemo": {
+    "url": "http://demo.guru99.com/popup.php",
+    "XPath": {
+      "popupLink": "/html/body/p/a",
+      "emailIDInput": "/html/body/form/table/tbody/tr[5]/td[2]/input",
+      "submitInput": "/html/body/form/table/tbody/tr[6]/td[2]/input",
+      "regInfoTable": "/html/body/table",
+      "userIDCell": "/html/body/table/tbody/tr[4]/td[2]",
+      "passwordCell": "/html/body/table/tbody/tr[5]/td[2]"
+    }
+  },
+
+  "AlertDemo": {
+    "url": "http://demo.guru99.com/test/delete_customer.php",
+    "confirmAssertExpectedTitle": "Do you really want to delete this Customer?",
+    "successAssertExpectedTitle": "Customer Successfully Delete!",
+    "XPath": {
+      "input": "/html/body/form/table/tbody/tr[2]/td[2]/input",
+      "submit": "/html/body/form/table/tbody/tr[3]/td[2]/input[1]"
+    }
+  },
+
+  "DownloadFileDemo": {
+    "url": "http://demo.guru99.com/test/yahoo.html",
+    "pathToFile": "C:\\Users\\sas16\\Downloads\\msgr11us.exe",
+    "XPath": {
+      "downloadButton": "/html/body/div[2]/div[2]/div[4]/a"
+    }
+  },
+
+  "LoginWithClickAndSubmitDemo": {
+    "url": "http://demo.guru99.com/test/login.html",
+    "expectedTitle": "Successfully Logged in...",
+    "XPath": {
+      "emailInput": "/html/body/div[2]/div/div/div[2]/div/div/div/form/div/div[1]/input",
+      "passwordInput": "/html/body/div[2]/div/div/div[2]/div/div/div/form/div/div[2]/span/input",
+      "signInButton": "/html/body/div[2]/div/div/div[2]/div/div/div/form/div/p[2]/button",
+      "actualTitle": "/html/body/div[2]/div/div/h3"
+    },
+    "regInfo": {
+      "email": "abcd@gmail.com",
+      "password": "abcdefgh"
+    }
+  },
+
+  "UploadFileDemo": {
+    "url": "http://demo.guru99.com/test/upload/",
+    "pathToUploadFile": "C:\\Users\\sas16\\Downloads\\unnamed.jpg",
+    "XPath": {
+      "uploadFileInput": "/html/body/div[2]/div/div/div[1]/form/div[2]/div[1]/div/div/input",
+      "checkBox": "/html/body/div[2]/div/div/div[2]/form/ul/li/center/span/input",
+      "uploadButton": "/html/body/div[2]/div/div/div[2]/form/ul/li/div[1]/button",
+      "successMessage": "/html/body/div[2]/div/div/div[2]/form/ul/li/div[2]/h3/center"
+    }
+  },
+
+  "ValidationFormDemo": {
+    "url": "http://demo.guru99.com/V1/index.php",
+    "XPath": {
+      "userIDInput": "/html/body/form/table/tbody/tr[1]/td[2]/input",
+      "passwordInput": "/html/body/form/table/tbody/tr[2]/td[2]/input",
+      "userIDValidationLabel": "/html/body/form/table/tbody/tr[1]/td[2]/label",
+      "passwordValidationLabel": "/html/body/form/table/tbody/tr[2]/td[2]/label"
+    }
+  }
+}
